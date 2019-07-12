@@ -18,6 +18,7 @@ function resetUI() {
   messaging.getToken().then((currentToken) => {
     if (currentToken) {
       sendTokenToServer(currentToken);
+      showToken(currentToken)
     } else {
       showToken('No Instance ID token available. Request permission to generate one.');
       setTokenSentToServer(false);
