@@ -5,7 +5,7 @@ messaging.onTokenRefresh(() => {
     sendTokenToServer(refreshedToken);
     resetUI();
   }).catch((err) => {
-    showToken('Unable to retrieve refreshed token ', err);
+    showToken('Unable to retrieve refreshed token ' + err);
   });
 });
 messaging.onMessage((payload) => {
