@@ -3,40 +3,10 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="https://surveyjs.azureedge.net/1.1.24/survey.jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    <script type="text/javascript">//<![CDATA[
-
-    window.onload=function(){
-
-        Survey.StylesManager.applyTheme("bootstrap");
-
-        var surveyJSON = {"pages":[{"name":"country","elements":[{"type":"dropdown","name":"question1","title":"Where do you live?","hasOther":true,"choices":[{"value":"item1","text":"Ukraine"},{"value":"item2","text":"Brazil"},{"value":"item3","text":"Israel"}]}],"title":"Country"},{"name":"age","elements":[{"type":"text","name":"question2","title":"What is your age?","inputType":"number"}],"title":"Age"},{"name":"like","elements":[{"type":"boolean","name":"question3","title":"Do you like cheeze?","labelTrue":"Yes","labelFalse":"No"},{"type":"boolean","name":"question4","title":"Do you like Pizza?","labelTrue":"Yes","labelFalse":"No"}],"title":"What do you like?"}]}
-
-        function sendDataToServer(survey) {
-            //send Ajax request to your web server.
-            alert("The results are:" + JSON.stringify(survey.data));
-        }
-
-        var survey = new Survey.Model(surveyJSON);
-        $("#surveyContainer").Survey({
-            model: survey,
-            onComplete: sendDataToServer
-        });
-
-            }
-
-          //]]></script>
-
 </head>
 <body>
-    <div id="surveyContainer"></div>
+    <div id="surveyContainer">Loading...</div>
 </body>
 </html>
